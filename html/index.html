@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aanya Beauty Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"></head>
+<body>
+<header><span class="logo">Aanya Beauty Studio</span>
+<nav><a href="#services">Services</a><a href="#offers">Offers</a><a href="#gallery">Gallery</a><a href="#reviews">Reviews</a><a href="#book">Book</a><a href="#owner">Owner desk</a></nav></header>
+
+<section class="hero">
+<div><h1>Hair, skin and a quiet hour for yourself.</h1>
+<p>Book a facial, haircut, bridal makeup or spa session in under a minute. You get a WhatsApp confirmation and a reminder before your visit.</p>
+<p><a class="btn" href="#book">Book an appointment</a> <a class="btn alt" href="#services">See prices</a></p></div>
+<div class="mirror"><img src="../assets/image-1.jpg" alt="Client enjoying a facial at the studio" onerror="var e=['jpg','jpeg','png'],i=+(this.dataset.i||0)+1;if(i<3){this.dataset.i=i;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else this.remove()"></div></section>
+
+<section id="about"><div class="about"><div class="ph" style="--a:#8a3b5a;--b:#e9b8c2"><img src="../assets/image-2.jpg" alt="Inside Aanya Beauty Studio" onerror="var e=['jpg','jpeg','png'],i=+(this.dataset.i||0)+1;if(i<3){this.dataset.i=i;this.src=this.src.replace(/\.\w+$/,'.'+e[i])}else this.remove()"></div>
+<div><h2>A calm studio, run by people who listen</h2><p class="sub">We keep appointments on time, use sealed products, and talk through every service and price before we start. Walk-ins are welcome when a stylist is free.</p><p><a class="btn alt" href="#book">Reserve your slot</a></p></div></div></section>
+
+<section id="services"><h2>Services and prices</h2><p class="sub">Prices are in rupees and include GST.</p>
+<div class="cats" id="svcTabs" role="tablist"></div><ul class="menu" id="svcList"></ul></section>
+
+<section id="offers"><h2>Packages and offers</h2><p class="sub">Bundles cost less than booking each service on its own.</p><div class="grid" id="packs"></div></section>
+
+<section id="gallery"><h2>Our work</h2><p class="sub">A few looks from the studio. </p><div class="gal" id="gal"></div></section>
+
+<section id="reviews"><h2>What clients say</h2><div class="grid" id="revs"></div>
+<div class="panel" style="margin-top:1.4rem;max-width:520px"><h3 style="font-size:1.5rem;margin-bottom:.6rem">Share your experience</h3>
+<form id="revForm"><div class="row"><label>Your name<input name="n" required maxlength="40"></label>
+<label>Rating<select name="r"><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select></label></div>
+<label>Your review<textarea name="t" rows="3" required maxlength="240"></textarea></label>
+<button class="btn" type="submit">Post review</button></form></div></section>
+
+<section id="book"><h2>Book an appointment</h2><p class="sub">Pick a service, a stylist and a free time. Greyed-out times are already taken.</p>
+<div class="panel"><form id="bookForm">
+<div class="row"><label>Service<select id="bSvc" required></select></label><label>Stylist<select id="bStaff" required></select></label></div>
+<div class="row"><label>Date<input type="date" id="bDate" required></label><label>Your name<input id="bName" required maxlength="40"></label></div>
+<div class="row"><label>WhatsApp number (with country code)<input id="bPhone" inputmode="tel" placeholder="919876543210" required pattern="[0-9]{10,14}"></label>
+<label>Birthday (optional)<input type="date" id="bBday"></label></div>
+<label>Anniversary (optional)<input type="date" id="bAnn"></label>
+<div><div style="font-weight:500;font-size:.9rem;margin-bottom:.3rem">Time</div><div class="slots" id="slots"></div><div id="slotNote" class="sub" style="margin:.4rem 0 0"></div></div>
+<button class="btn" type="submit">Confirm booking</button></form>
+<div id="done" class="msg hide" role="status"></div></div></section>
+
+<section id="owner"><h2>Owner desk</h2><p class="sub">Manage bookings, stylists, and customer messages. Data is saved in this browser only. Enter the PIN to open.</p>
+<div id="lock" class="panel" style="max-width:340px"><label>PIN<input type="password" id="pin" inputmode="numeric" autocomplete="off"></label><p style="margin:.6rem 0 0"><button class="btn sm" id="unlock" type="button">Open owner desk</button> <span id="pinErr" class="sub"></span></p><p class="sub" style="margin:.6rem 0 0;font-size:.82rem">Demo PIN is 1234. Change OWNER_PIN in the code.</p></div>
+<div id="desk" class="hide"><div class="tabs" id="dTabs" role="tablist"><button class="tab" role="tab" data-t="b" aria-selected="true">Bookings</button><button class="tab" role="tab" data-t="s" aria-selected="false">Staff and schedule</button><button class="tab" role="tab" data-t="c" aria-selected="false">Customers and messages</button></div>
+<div class="panel scroll" id="dBody"></div></div></section>
+
+<footer>Aanya Beauty Studio. Open every day 10:00 to 19:00. <button class="chip" id="theme" type="button">Switch theme</button></footer>
+
+<script src="../js/app.js"></script></body></html>
